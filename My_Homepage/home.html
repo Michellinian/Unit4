@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arat's Homepage</title>
+    <style>
+        :root {
+            --mainColor: #ff9800;
+        }
+
+        body {
+            text-align: center;
+            background-color: black;
+            color: lightgreen;
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 100px;
+            margin-top: 20%;
+            margin-bottom: 30%;
+        }
+
+        table, th, td {
+            border: 1px solid white;
+            width: 50%
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #myPhoto {
+            width: 50%;
+        }
+
+        a {
+            background:
+                linear-gradient(
+                    to bottom, var(--mainColor) 0%,
+                    var(--mainColor) 100%
+                );
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 4px 4px;
+            color: #fffafa;
+            text-decoration: none;
+            transition: background-size .2s;
+        }
+
+        a:hover {
+            background-size: 4px 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Arata Katayama</h1>
+    <p>Hi there, I am Arata.</p>
+    <img id="myPhoto" src="myPhoto.png">
+    <h2>About Me</h2>
+    <p>I am Arata. I am 17 years old, and I am from <a href="#yokohama">Yokohama</a>, Kanagawa pref. Japan. <br>I was originally born in Manhattan,
+    New York, and I came to Japan when I was 3 months old. <br>I received my education in japan, all the way from preschool
+    to high school. <br>I had a passion for sports since I was small, and currently I am into tricking. <br>I am at a boarding
+    school in Karuizawa, Nagano pref. and there I pursue my academic as well as sports' passion. <br>If you want to know
+    more about my education and career, go <em><a href="#education">here</a></em>.</p>
+
+    <h2 id="education">Received Education</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>School name</td>
+                <td>Age</td>
+                <td>What I liked to do</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://horizon.ac.jp/">Horizon Japan International School</a></td>
+                <td>Grade 1 - Grade 6</td>
+                <td>Soccer</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.kaiyo.ac.jp/">Kaiyo Academy</a></td>
+                <td>Grade 7 - Grade 9</td>
+                <td>Gymnastics</td>
+            </tr>
+            <tr>
+                <td><a href="https://uwcisak.jp/">UWC ISAK Japan</a></td>
+                <td>Grade 10 ~ </td>
+                <td>Tricking</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="yokohama">My Hometown</h2>
+    <img src="https://cdn.zekkei-japan.jp/images/spots/da4b5c0d661a0840b3bef901b6177f48.jpg">
+</body>
+</html>
