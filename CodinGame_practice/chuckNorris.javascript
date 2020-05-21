@@ -1,4 +1,4 @@
-```
+
 /**
  * Auto-generated code below aims at helping you parse
  * the standard input according to the problem statement.
@@ -37,4 +37,3 @@ for (var i = 1; i < binaryText.length; i++) {
 // To debug: console.error('Debug messages...');
 
 console.log(answer);
-```
