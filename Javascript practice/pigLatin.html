@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pig Latin game</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="home">
+    <h1>Pig Latin</h1>
+    <form id="init_word">
+        <label>Enter word:</label><br>
+        <input id="initialWord" type="text">
+    </form>
+    <button onclick="pigLatinning()">Submit</button>
+    <p>The Pig Latin is:</p><br>
+</div>
+<div id="output">
+
+</div>
+</body>
+<script>
+    function pigLatinning() {
+        var init_word = document.getElementById("initialWord"); // read the element in the input box
+        var text = init_word.value; // get the value
+        var splitWord = text.split(""); // split the word letter by letter
+        var pigLatinned = splitWord[0]; // get the first letter
+        splitWord[0] = splitWord[splitWord.length]; // remove the first letter and move it last
+        splitWord[splitWord.length] = pigLatinned;
+        var newText = splitWord.join(''); // join the letters back together into a string
+        newText = newText.concat("ay"); // add suffix "ay"
+        console.log("The Pig Latin is", newText); // print the outcome in the console
+    }
+</script>
+</html>
