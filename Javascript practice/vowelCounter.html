@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vowel Counter</title>
+</head>
+<body>
+<div>
+    <h1>Vowels Counter</h1>
+    <p>Enter a sentence below</p>
+    <form>
+        <label>Input:</label><br>
+        <input id="sentence" type="text" placeholder="Enter sentence">
+    </form>
+    <button onclick="vowelCount()">Submit</button>
+</div>
+<div id="output">
+
+</div>
+</body>
+<script>
+    const vowels = ["a", "e", "i", "o", "u"];
+
+    for (i=0; i<vowels.length; i++) {
+        var para = document.createElement("P");//create a p element
+        para.innerText = vowels[i] + ": ";// Insert text
+        document.getElementById("output").appendChild(para)
+    }
+
+    function vowelCount() {
+        var init_sent = document.getElementById("sentence");
+        var text = init_sent.value;
+        var splitSent = text.split("");
+        var counts = [countA=0, countE=0, countI=0, countO=0, countU=0];
+        // var countA = 0;
+        // var countE = 0;
+        // var countI = 0;
+        // var countO = 0;
+        // var countU = 0;
+        for (x=0; x<splitSent.length; x++) {
+            if (splitSent[i] == vowels[0]) {
+                countA += 1;
+            }
+            if (splitSent[i] == vowels[1]) {
+                countE += 1;
+            }
+            if (splitSent[i] == vowels[2]) {
+                countI += 1;
+            }
+            if (splitSent[i] == vowels[3]) {
+                countO += 1;
+            }
+            if (splitSent[i] == vowels[4]) {
+                countU += 1;
+            }
+        }
+        for (y=0; y<counts.length; y++) {
+            var outcome = document.createElement("P");
+            outcome.innerText = counts[y];
+            document.getElementById("output").appendChild(outcome)
+        }
+
+    }
+
+</script>
+</html>
