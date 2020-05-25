@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome</title>
+</head>
+<body>
+    <h1>Check if Palindrome</h1>
+    <form>
+        <label>Enter a word: </label><br>
+        <input id="initialWord" type="text"><br>
+    </form>
+    <button onclick="checkPalin()">Submit</button>
+    <div id="output">
+
+    </div>
+</body>
+<script>
+    function checkPalin() {
+        var init_word = document.getElementById("initialWord"); // read the element in the input box
+        var input_value = init_word.value; // get the value
+        var reverse_input = input_value.split("").reverse().join("");
+        console.log(reverse_input)
+        var para = document.createElement("P");//create a p element
+        if (reverse_input == input_value) {
+            console.log("Palindrome!");
+            para.innerText = input_value + " is a palindrome!";// Insert text
+            document.getElementById("output").appendChild(para)
+        } else {
+            console.log("Not a Palindrome!");
+            para.innerText = input_value + " is not a palindrome!";// Insert text
+            document.getElementById("output").appendChild(para)
+        }
+    }
+
+</script>
+</html>
